@@ -9,9 +9,9 @@
 // @match https://www.powerlanguage.co.uk/wordle*
 
 // @run-at document-idle
-
+// @esversion: 8
 // ==/UserScript==
-
+/*jshint esversion: 8 */
 
 const words = [
     "cigar",
@@ -13141,7 +13141,7 @@ const get_board = () => get_current_game().$board,
           var guess = get_guess(cur);
           input_guess(guess);
           await get_promise_from_event(get_board(), "game-last-tile-revealed-in-row");
-      }
+      };
 
 Object.assign(_window, {
     restart_with_word,
